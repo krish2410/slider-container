@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    title="Slider Container"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <title
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Title"
+            name="./title"
+            xtype="textfield"/>
+		<quickLinks
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Quick Links"
+		    name="./quickLinks"
+		    xtype="multifield">
+		    <fieldConfig
+                jcr:primaryType="cq:Widget"
+                border="{Boolean}false"
+                xtype="multifieldpanel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <listHeading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="List Heading"
+                        key="heading"
+                        name="./listHeading"
+                        xtype="textfield"/>
+                    <linkPath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link Path"
+                        key="linkPath"
+                        name="./linkPath"
+                        rootPath="/content"
+                        width="120"
+                        xtype="pathfield"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image"
+                        key="imagePath"
+                        name="./image"
+                        width="120"
+                        xtype="pathfield"/>
+                    <altText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Alt Text"
+                        key="altText"
+                        name="./alt"
+                        width="120"
+                        xtype="textfield"/>
+                    <imageTitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Image Title"
+                        key="imageTitle"
+                        name="./imageTitle"
+                        xtype="textfield"/>
+                    <descriptionMessage 
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Description"
+                        key="message"
+                        name="./descriptionMessage"
+                        xtype="richtext"/>
+                </items>
+            </fieldConfig>
+        </quickLinks>
+    </items>
+</jcr:root>
